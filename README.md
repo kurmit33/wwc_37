@@ -1,2 +1,2 @@
 # Author Paweł Szwasy
-# Weekly Web Challeng
+# Weekly Web Dev Challenge
