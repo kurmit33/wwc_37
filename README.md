@@ -1,1 +1,2 @@
-# wwc_37
+# Author Paweł Szwasy
+# Weekly Web Challeng
