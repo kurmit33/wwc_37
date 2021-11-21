@@ -272,12 +272,25 @@ textarea {
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 920px;
-  background-color: #BC2E3A;
-  background-image: url("../img/HomeBackground.png");
-  fill-opacity: 50%;
+  height: 100vh;
+  background-color: rgba(188, 46, 58, 1);
+
 }
 
+.home-main:before {
+  margin: 0;
+  padding: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  min-width: 100%;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/HomeBackground.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 56%;
+}
 .home-top-row {
   display: flex;
   flex-direction: row;
@@ -319,14 +332,19 @@ textarea {
 .home-center {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-.home-center-left, .home-center-right {
-  width: 50%;
+.home-center-left{
 }
 
 .home-center-right {
-  align-self: center;
+  z-index: 999;
+  min-width: 50%;
+  display: flex;
+  background-image: url("../img/Shade.png");
+  background-position-y: center;
+  background-position-x: -291px;
+  background-size: cover;
 }
-
 
