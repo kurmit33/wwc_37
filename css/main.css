@@ -270,11 +270,13 @@ textarea {
 .home-main {
   min-width: 100%;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  position: fixed;
   height: 100vh;
+  z-index: 9;
   background-color: rgba(188, 46, 58, 1);
-
 }
 
 .home-main:before {
@@ -282,7 +284,7 @@ textarea {
   padding: 0;
   content: '';
   display: block;
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   width: 100%;
   height: 100vh;
@@ -290,8 +292,16 @@ textarea {
   background-position: center;
   background-size: cover;
   opacity: 56%;
+  z-index: 99;
+  fill: #FFFFFF;
 }
-.home-top-row {
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 99999999;
+}
+.header-top-row {
   display: flex;
   flex-direction: row;
   margin: 1em 3% 0.5em 3%;
@@ -299,14 +309,14 @@ textarea {
   gap: 50% 0;
 }
 
-.home-top-logo {
+.header-top-logo {
   font-family: "Lato Semibold", sans-serif;
   font-size: 1.5em;
   color: #FFFFFF;
   flex-grow: 1;
 }
 
-.home-top-menu {
+.header-top-menu {
   flex-grow: 2;
 }
 .main-menu{
@@ -314,6 +324,7 @@ textarea {
   flex-direction: row;
   justify-content: flex-end;
   gap: 2%;
+  color: #FFFFFF;
 }
 
 .main-menu-item button {
@@ -333,18 +344,31 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 2em;
 }
 
 .home-center-left{
 }
 
 .home-center-right {
-  z-index: 999;
   min-width: 50%;
   display: flex;
+  position: static;
+}
+
+.home-center-right::before {
+  z-index: -1;
+  content: ' ';
+  display: block;
+  min-width: 50%;
+  height: 100%;
+  position: fixed;
   background-image: url("../img/Shade.png");
   background-position-y: center;
-  background-position-x: -291px;
+  background-position-x: -300px;
   background-size: cover;
+}
+.home-center-right img {
+  z-index: 999999;
 }
 
